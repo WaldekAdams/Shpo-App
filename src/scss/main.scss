@@ -6,11 +6,96 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
   color: $yellow;
-  background: $violet;
+  // background: $violet;
+  height: 100vh;
+}
+
+.heading {
+  height: 15vh;
+  background-color: bisque;
+  text-align: center;
+  line-height: 15vh;
+  margin-top: 3vh;
+}
+
+.wrap {
+  position: absolute;
+  width: 60vw;
+  height: 50vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    border: 3px solid rgb(68, 23, 23);
+    flex-basis: 25%;
+    background-color: chocolate;
+  }
+}
+
+.item {
+  &__img {
+    margin-top: 5%;
+    width: 100%;
+    padding: 30px;
+  }
+
+  &__heading {
+    font-family: fantasy;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 32px;
+    text-align: center;
+    height: 15%;
+  }
+
+  &__description {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+
+
+  }
+
+  &__price {
+    text-align: right;
+    margin-right: 10%;
+  }
+
+  &__btn {
+    display: block;
+    margin: 30px auto 0;
+  }
+}
+
+
+.aside {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  border: 2px solid darkgoldenrod;
+  width: 10vw;
+}
+
+.added {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  background-color: cadetblue;
+}
+
+.addItem {
+  border: 1px dashed rgb(47, 47, 209);
+  width: 100%;
+
 }
