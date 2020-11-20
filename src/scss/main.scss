@@ -81,21 +81,104 @@ body {
 
 .aside {
   position: absolute;
-  top: 25%;
-  right: 5%;
+  top: 20%;
+  right: 2%;
   border: 2px solid darkgoldenrod;
-  width: 10vw;
+  width: 15vw;
+  min-height: 10vh;
+  padding: 0;
+
 }
 
 .added {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
+  height: 90%;
   padding: 0;
-  background-color: cadetblue;
+  background-color: rgb(149, 182, 184);
+  margin: 0;
+  padding: 0;
+
+
+
 }
 
 .addItem {
-  border: 1px dashed rgb(47, 47, 209);
+  border: 1px solid rgb(66, 66, 80);
   width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
 
+
+
+  &__img {
+    background-color: chocolate;
+    display: block;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    margin: 5% auto 0;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 20%;
+    text-align: center;
+
+  }
+
+  &__name {
+    display: block;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(14, 5, 5);
+    font-size: 24px;
+    // background-color: darkgreen;
+    text-align: center;
+    height: 100%;
+    // flex-grow: 1;
+    flex-basis: 20%;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__price {
+    // background-color: darkgoldenrod;
+    // flex-grow: 1;
+    flex-basis: 20%;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    padding-right: 5%;
+    padding-top: 2%;
+    background-color: rgba(248, 237, 237, 0.3);
+    color: rgb(63, 43, 5);
+
+  }
+
+  &__summary {
+    // background-color: rgb(174, 185, 185);
+    text-align: right;
+    color: black;
+    padding-right: 5%;
+
+
+  }
+
+  &__total-cost {
+    font-size: 18px;
+    color: rgb(41, 37, 37);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+
+  }
+
+  &__toPay {
+    font-weight: bold;
+  }
 }
