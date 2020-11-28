@@ -35,19 +35,22 @@ body {
   transform: translate(-50%, 0);
   display: flex;
   justify-content: space-between;
-
-  &__item {
-    border: 3px solid rgb(68, 23, 23);
-    flex-basis: 25%;
-    background-color: chocolate;
-  }
 }
 
 .item {
+  border: 3px solid rgb(68, 23, 23);
+  flex-basis: 25%;
+  background-color: chocolate;
+
   &__img {
-    margin-top: 5%;
+    margin: 5% auto 0;
+    display: block;
     width: 100%;
     padding: 30px;
+    width: 200px;
+    height: 200px;
+    background-color: burlywood;
+
   }
 
   &__heading {
@@ -119,7 +122,7 @@ body {
 
 
   &__img {
-    background-color: chocolate;
+
     display: block;
     padding: 5px;
     width: 50px;
@@ -129,6 +132,7 @@ body {
     justify-content: center;
     flex-basis: 20%;
     text-align: center;
+    background-color: burlywood;
 
   }
 
