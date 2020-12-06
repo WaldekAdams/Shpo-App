@@ -27,6 +27,11 @@ const itemsNames = document.querySelectorAll('.item__heading');
 const itemsPrice = document.querySelectorAll('.item__price');
 const images = document.querySelectorAll('.item__img--js');
 const addedList = document.querySelector('.added');
+const moneys = document.querySelectorAll('.item__money--js');
+let summaryCost = document.querySelector('.addItem__toPay--js');
+
+let allToPay = 0;
+summaryCost.textContent = allToPay;
 // let chosenImg;
 // console.log(buttons);
 // console.log(images);
@@ -38,13 +43,15 @@ buttons.forEach(btn => {
     let chosenImg;
     let chosenName;
     let chosenPrice;
+    let cashToPay;
+
     // console.log(itemNumber);
 
     images.forEach(img => {
 
       if (img.dataset.item === itemNumber) {
         chosenImg = img;
-        console.log(chosenImg.src)
+        // console.log(chosenImg.src)
       }
 
 
@@ -55,17 +62,25 @@ buttons.forEach(btn => {
     itemsNames.forEach(name => {
       if (name.dataset.item === itemNumber) {
         chosenName = name;
-        console.log(chosenName.textContent)
+        // console.log(chosenName.textContent)
       }
     })
 
     itemsPrice.forEach(price => {
       if (price.dataset.item === itemNumber) {
         chosenPrice = price;
-        console.log(chosenPrice.textContent)
+        // console.log(chosenPrice.textContent)
       }
     })
 
+    moneys.forEach(mone => {
+      if (mone.dataset.item === itemNumber) {
+        cashToPay = mone.textContent;
+        allToPay = allToPay + parseInt(cashToPay);
+        summaryCost.textContent = allToPay;
+      }
+    })
+    console.log(cashToPay, allToPay)
     const li = document.createElement('li');
 
     const miniImg = document.createElement('img');
@@ -86,6 +101,7 @@ buttons.forEach(btn => {
     li.appendChild(miniImg);
     li.appendChild(miniName);
     li.appendChild(miniPrice);
+
 
   })
 })
