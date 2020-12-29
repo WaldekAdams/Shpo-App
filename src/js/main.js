@@ -106,10 +106,16 @@ buttons.forEach(btn => {
 
   })
 })
-btnRemoveItem.addEventListener('click', function () {
 
-  const liToRemove = this.parentNode;
-  console.log(liToRemove);
-  addedList.removeChild(liToRemove)
+addedList.addEventListener('click', function (e) {
 
+  console.log(e.target)
+  console.log(e.currentTarget)
+  if (e.target.tagName === 'BUTTON') {
+    console.log('huj');
+    const liToRemove = e.target.parentNode;
+    console.log(liToRemove);
+    addedList.removeChild(liToRemove)
+
+  }
 })
