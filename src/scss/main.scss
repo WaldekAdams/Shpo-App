@@ -165,6 +165,16 @@ body {
 
   }
 
+  &__btn-remove {
+    background-color: cornflowerblue;
+    width: 30%;
+    flex-basis: 50%;
+    align-items: flex-end;
+    display: inline-block;
+
+    // margin: 2px auto;
+  }
+
   &__summary {
     // background-color: rgb(174, 185, 185);
     text-align: right;

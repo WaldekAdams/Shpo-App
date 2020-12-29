@@ -29,6 +29,7 @@ const images = document.querySelectorAll('.item__img--js');
 const addedList = document.querySelector('.added');
 const moneys = document.querySelectorAll('.item__money--js');
 let summaryCost = document.querySelector('.addItem__toPay--js');
+let btnRemoveItem = document.querySelector('.addItem__btn-remove--js');
 
 let allToPay = 0;
 summaryCost.textContent = allToPay;
@@ -104,4 +105,11 @@ buttons.forEach(btn => {
 
 
   })
+})
+btnRemoveItem.addEventListener('click', function () {
+
+  const liToRemove = this.parentNode;
+  console.log(liToRemove);
+  addedList.removeChild(liToRemove)
+
 })
