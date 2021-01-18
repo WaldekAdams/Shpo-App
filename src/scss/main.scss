@@ -78,6 +78,11 @@ body {
   &__btn {
     display: block;
     margin: 30px auto 0;
+    background-color: $blueBtn;
+
+    &:hover {
+      background-color: lighten($blueBtn, 20%);
+    }
   }
 }
 

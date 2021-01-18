@@ -96,12 +96,18 @@ buttons.forEach(btn => {
     miniPrice.textContent = chosenPrice.textContent;
     miniPrice.classList.add('addItem__price');
 
+    const btnRemove = document.createElement('button');
+    btnRemove.textContent = "Usun";
+    btnRemove.classList.add('addItem__btn-remove');
+
 
     addedList.appendChild(li);
 
     li.appendChild(miniImg);
     li.appendChild(miniName);
     li.appendChild(miniPrice);
+    li.appendChild(btnRemove)
+
 
 
   })
